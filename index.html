@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini English Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container welcome-page">
+        <h1>Panda English Quiz</h1>
+        <p>Hayyy Pandaaaa! uji kemampuan Bahasa Inggris kamu yuk..</p>
+        <div class="input-group">
+            <label for="nameInput">Masukkan Namamu:</label>
+            <input type="text" id="nameInput" placeholder="Nama Lengkap" required>
+        </div>
+        <button id="startButton">Mulai Kuis</button>
+    </div>
+
+    <div class="container quiz-page" style="display:none;">
+        <div class="header">
+            <div id="timer">Waktu: 60:00</div>
+            <div class="question-info">
+                <h2 id="questionNumber">Soal ke-1</h2>
+            </div>
+        </div>
+
+        <div class="audio-selection">
+            <h3>Pilih Musik Latar:</h3>
+            <div class="audio-options">
+                <label><input type="radio" name="audio" value="assets/bergema sampai selamanya.mp3" checked> bergema sampai selamanya</label>
+                <label><input type="radio" name="audio" value="assets/sempurna.mp3"> sempurna</label>
+                <label><input type="radio" name="audio" value="assets/lagu.mp3"> penjaga hati x bergema</label>
+            </div>
+            <button id="startQuizButton">Mulai Kuis!</button>
+        </div>
+
+        <div id="quizContent" style="display:none;">
+            <div id="questionText"></div>
+            <div id="options" class="options-container"></div>
+            <div class="navigation-buttons">
+                <button id="prevButton" style="display:none;">Sebelumnya</button>
+                <button id="nextButton">Selanjutnya</button>
+            </div>
+            <button id="finishButton" style="display:none;">Selesai</button>
+        </div>
+    </div>
+
+    <div class="container result-page" style="display:none;">
+        <h2>Hasil Kuis</h2>
+        <p>Halo, <span id="resultName"></span>!</p>
+        <p>Skor Anda: <span id="resultScore"></span></p>
+    </div>
+
+    <audio id="backgroundAudio" loop></audio>
+    <script src="script.js"></script>
+</body>
+</html>
